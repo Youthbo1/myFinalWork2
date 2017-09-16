@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/bg_splash">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="325dp"
+        android:src="@drawable/img"
+        android:id="@+id/Image"
+        android:layout_gravity="center" />
+
+    <!--显示歌曲状态-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/MusicStatus"
+        android:textColor="@android:color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal">
+
+        <!--显示当前进度-->
+        <TextView
+            android:id="@+id/MusicTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="20sp"
+            android:textColor="?attr/colorBackgroundFloating"/>
+
+        <SeekBar
+            android:layout_width="230sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/MusicSeekBar"
+            android:layout_weight="1"
+            android:max="100"
+            android:layout_toRightOf="@+id/MusicTime"/>
+
+        <!--显示总进度-->
+        <TextView
+            android:id="@+id/MusicTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/MusicSeekBar"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BtnPlayorPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape"
+            android:text="PLAY"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/BtnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:layout_marginRight="15dp"
+            android:text="STOP"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="horizontal"-->
+    <!--&gt;-->
+
+        <!--<Button-->
+            <!--android:id="@+id/BtnBefore"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:background="@drawable/shape"-->
+            <!--android:text="上一首"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@android:color/white" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/BtnNext"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:background="@drawable/shape"-->
+            <!--android:text="下一首"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@android:color/white" />-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>
+
